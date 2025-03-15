@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            background: url('https://source.unsplash.com/1600x900/?anime,cyberpunk') no-repeat center center/cover;
+            text-align: left;
+            color: white;
+            padding: 0 50px;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+        }
+        .signup-btn {
+            background: #ff4757;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .signup-btn:hover {
+            background: #e84118;
+        }
+        .google-play {
+            width: 150px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        
+        /* Image Overlay Section */
+        .image-container {
+            position: relative;
+            width: 300px; /* Adjust based on your image size */
+            height: 500px;
+            margin-right: 50px;
+        }
+        .image-container img {
+            position: absolute;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .image3 {
+            bottom: 40px;
+            right: 400px;
+            z-index: 2;
+        }
+        .image1 {
+            top: 0;
+            right: 200px;
+            z-index: 2;
+        }
+        .image2 {
+            top: 40px; /* Adjust for overlap */
+            left: 20px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our App</h1>
+        <p>Be the first to experience the future. Sign up for closed testing now!</p>
+        <button class="signup-btn" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdeKH5ZxwmeLJsvXNMh6K3FNJNalwwWxYUDDYwgwy3hVQ01pQ/viewform?usp=dialog')">Sign Up for Testing</button>
+        <br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="google-play">
+    </div>
+
+    <!-- Image Overlay Section -->
+    <div class="image-container">
+        <img src="iPhone 16 Plus - 41.png" alt="Anime Character 1" class="image1">
+        <img src="iPhone 16 Plus - 42.png" alt="Anime Character 2" class="image2">
+        <img src="iPhone 16 Plus - 43.png" alt="Anime Character 3" class="image3">
+    </div>
+</body>
+</html>
