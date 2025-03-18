@@ -15,11 +15,14 @@ body {
 
 /* Container (Desktop) */
 .container {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6); /* Dark background for contrast */
     padding: 20px;
     border-radius: 10px;
-    max-width: 400px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center; /* Center text properly */
 }
+
 
 /* Buttons */
 button, .discord-btn, .contact-btn, .youtube-btn, .data-request-btn {
