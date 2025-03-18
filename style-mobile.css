@@ -1,0 +1,94 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    background: url('https://source.unsplash.com/1600x900/?anime,cyberpunk') no-repeat center center/cover;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    transform: scale(0.85);  /* Scales down layout to fit */
+    transform-origin: top center;
+}
+
+/* Container Styles */
+.container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    width: 95%;
+    max-width: 380px;
+}
+
+/* Buttons */
+button, .discord-btn, .contact-btn, .youtube-btn, .data-request-btn {
+    background: #ff4757;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    width: 100%;
+    max-width: 280px;
+    margin-top: 10px;
+}
+
+button:hover, .discord-btn:hover, .contact-btn:hover, .youtube-btn:hover, .data-request-btn:hover {
+    background: #e84118;
+}
+
+/* Google Play Button */
+.google-play {
+    width: 140px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* Image Overlay Section */
+.image-container {
+    width: 100%;
+    max-width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.image-container img {
+    position: relative;
+    width: 100%;
+    max-width: 120px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    margin: 5px;
+}
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 768px) {
+    body {
+        transform: scale(0.9); /* Keep it readable */
+        width: 110%; /* Expand slightly to prevent shrinking */
+        padding: 10px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .image-container {
+        flex-direction: column; /* Stack images */
+        align-items: center;
+    }
+
+    .image-container img {
+        max-width: 110px;
+    }
+}
