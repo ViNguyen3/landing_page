@@ -70,19 +70,13 @@ button:hover, .discord-btn:hover, .contact-btn:hover, .youtube-btn:hover, .data-
 
 /* Mobile Responsive Fix */
 @media (max-width: 768px) {
-    .image-container {
-        flex-direction: column; /* Stack images vertically */
-        align-items: center;
-        position: static; /* Remove any absolute positioning */
-        margin-top: 20px;
-    }
-
-    .image-container img {
-        max-width: 120px; /* Make images smaller on mobile */
+    body {
+        transform: scale(0.8);  /* Adjust zoom level */
+        transform-origin: top center; /* Keep scaling centered */
+        width: 125%; /* Compensate for scale shrinkage */
     }
 
     .container {
-        position: relative; /* Make sure it's above the images */
-        z-index: 2; /* Ensure it stays on top */
+        max-width: 400px; /* Keep box size consistent */
     }
 }
