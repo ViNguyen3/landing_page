@@ -1,25 +1,23 @@
-/* General Styles */
+/*  Default Desktop Styles  */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: auto; /* Allow scrolling */
+    justify-content: space-between;
+    height: 100vh;
     background: url('https://source.unsplash.com/1600x900/?anime,cyberpunk') no-repeat center center/cover;
-    text-align: center;
+    text-align: left;
     color: white;
-    padding: 20px;
+    padding: 0 50px;
 }
 
-/* Container Styles */
+/* Container (Desktop) */
 .container {
     background: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 10px;
-    width: 90%;
     max-width: 400px;
 }
 
@@ -27,14 +25,12 @@ body {
 button, .discord-btn, .contact-btn, .youtube-btn, .data-request-btn {
     background: #ff4757;
     color: white;
-    padding: 12px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    max-width: 300px;
-    margin-top: 15px;
+    font-size: 18px;
+    margin-top: 20px;
 }
 
 button:hover, .discord-btn:hover, .contact-btn:hover, .youtube-btn:hover, .data-request-btn:hover {
@@ -48,35 +44,97 @@ button:hover, .discord-btn:hover, .contact-btn:hover, .youtube-btn:hover, .data-
     cursor: pointer;
 }
 
-/* Image Overlay Section */
+/* Image Overlay Section (Desktop) */
 .image-container {
-    width: 100%;
-    max-width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
-    margin-top: 30px;
+    width: 300px;
+    height: 500px;
+    margin-right: 50px;
 }
 
 .image-container img {
-    position: relative;
+    position: absolute;
     width: 100%;
-    max-width: 150px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    margin: 5px;
 }
 
-/* Mobile Responsive Fix */
+.image3 {
+    bottom: 40px;
+    right: 400px;
+    z-index: 2;
+}
+
+.image1 {
+    top: 0;
+    right: 200px;
+    z-index: 2;
+}
+
+.image2 {
+    top: 40px;
+    left: 20px;
+    z-index: 1;
+}
+
+/*  Mobile Styles  */
 @media (max-width: 768px) {
+    /* Mobile Body */
     body {
-        transform: scale(0.8);  /* Adjust zoom level */
-        transform-origin: top center; /* Keep scaling centered */
-        width: 125%; /* Compensate for scale shrinkage */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        background: url('https://source.unsplash.com/1600x900/?anime,cyberpunk') no-repeat center center/cover;
+        text-align: center;
+        color: white;
+        padding: 20px;
+        transform: scale(0.8);  /* Zoom effect */
+        transform-origin: top center;
+        width: 125%; /* Prevent shrinking */
     }
 
+    /* Mobile Container */
     .container {
-        max-width: 400px; /* Keep box size consistent */
+        background: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 400px;
+    }
+
+    /* Mobile Buttons */
+    button, .discord-btn, .contact-btn, .youtube-btn, .data-request-btn {
+        background: #ff4757;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+        max-width: 300px;
+        margin-top: 15px;
+    }
+
+    /* Mobile Image Section */
+    .image-container {
+        width: 100%;
+        max-width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 30px;
+    }
+
+    .image-container img {
+        position: relative;
+        width: 100%;
+        max-width: 150px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        margin: 5px;
     }
 }
