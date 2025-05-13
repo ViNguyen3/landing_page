@@ -1,51 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Landing Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your AI Assistant</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .bg {
+      background: url('ai_person_expand.png') no-repeat center center;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+      filter: brightness(1); /* tweak for darkness/lightness */
+    }
+
+    .content {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 2rem 4rem;
+      color: white;
+      text-align: left;
+    }
+
+    .text-box {
+      max-width: 600px;
+      background-color: rgba(0, 0, 0, 0.6); /* Optional for contrast */
+      padding: 2rem;
+      border-radius: 12px;
+    }
+
+    .text-box h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .text-box p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #ddd;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .buttons a {
+      padding: 0.8rem 1.6rem;
+      border-radius: 8px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .buttons a.primary {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .buttons a.secondary {
+      border: 1px solid #fff;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .text-box h1 {
+        font-size: 2rem;
+      }
+
+      .text-box p {
+        font-size: 1rem;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .buttons a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Skibi-di (no toilet here) </h1>
-        <p>Talk to your waifu cause that's what I have for now XD. SIGN UP FOR CLOSED TESTING NOW! IOS will comes in a bit I can't develop both platforms at the same time lol</p>
-        <button class="signup-btn" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdeKH5ZxwmeLJsvXNMh6K3FNJNalwwWxYUDDYwgwy3hVQ01pQ/viewform?usp=dialog')">SIGN UP EMAIL FOR UPDATE (Don't worry I don't spam)</button>
-        <br>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="google-play">
-        
-        <div class="section">
-            <h2>Contact Me</h2>
-            <p>Have any questions? Feel free to reach out!</p>
-            <a href="mailto:huynjoon2002@gmail.com" class="contact-btn">Email Me</a>
-        </div>
+  <div class="bg"></div>
 
-        <div class="section">
-            <h2>Join Discord</h2>
-            <p>If you don't like email you can reach me in the Discord group</p>
-            <a href="https://discord.gg/qgFvxBm8" class="discord-btn">Join Discord</a>
-        </div>
-    
-        <div class="section">
-            <h2>Youtube Chanel</h2>
-            <p>I try to update you guys with the progress on Youtube here.</p>
-            <a href="https://www.youtube.com/@skibi_di_waifu" class="youtube-btn">Watch on YouTube</a>
-        </div>
-        
-        <div class="section">
-            <h2>Request Data Deletion</h2>
-            <p>If you want to request the deletion of your data, please follow the steps on the data deletion page.</p>
-            <a href="data_deletion.html" class="data-request-btn">How to Request Data Deletion</a>
-        </div>
+  <div class="content">
+    <div class="text-box">
+      <h1>Your AI. <br />Your Rules.</h1>
+      <p>Create your own AI assistant — fully customizable, emotionally engaging, built to serve your needs, and share it with others.</p>
+      <div class="buttons">
+        <a href="https://play.google.com/store/apps/details?id=com.live2d.demo&pcampaignid=web_share" class="primary">Download on Android</a>
+        <a href="#" class="secondary">Learn More</a>
+      </div>
     </div>
-
-
-
-    <!-- Image Overlay Section -->
-    <div class="image-container">
-        <img src="iPhone 16 Plus - 41.png" alt="Anime Character 1" class="image1">
-        <img src="iPhone 16 Plus - 42.png" alt="Anime Character 2" class="image2">
-        <img src="iPhone 16 Plus - 43.png" alt="Anime Character 3" class="image3">
-    </div>
+  </div>
 </body>
 </html>
